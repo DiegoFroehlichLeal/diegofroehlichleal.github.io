@@ -263,15 +263,22 @@ contato
 
 #contato {
    flex-direction: row;
-   flex-wrap: wrap;
+   flex-wrap: nowrap;
    justify-content: space-around;
    max-width: 500px;
    margin: 0 auto;
+   
 }
-
+#contato img {
+   width: 30%;
+}
 #contato h2
  {
-   width: 100%;
+   flex-direction: row;
+   flex-wrap: nowrap;
+   justify-content: space-around;
+   max-width: 500px;
+   margin: 0 auto;
 }
 
 
