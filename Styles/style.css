@@ -1,287 +1,140 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+
+}
+
 body {
-   font-family: "Open Sans",  Helvetica, Arial, sans-serif;
-   color: #4d4d4d;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: linear-gradient(#2b1055, #7597de);
 }
-
-h1, h2, h3 {
-   margin: 0;
-   font-family: "Roboto Slab",  Helvetica, Arial, sans-serif;
-   font-weight: 700;
-
-}
-.botao{
-   color: #f1f1f1;
-   text-decoration: none;
-   padding: 10px 30px;
-   background-color: #8f3faf;
-   font-size: .9em;
-   border-radius: 3px;
-}
-/*
-navegação
-*/
-
-nav {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   background-color: #4d4d4d;
-
-}
-
-nav > a {
-   text-decoration: none;
-   color: #f1f1f1;
-   font-weight: 700;
-   font-size: 28px;
-   font-family: Pacifico, serif;
-
-}
-
-nav ul {
-   list-style: none;
-   padding: 0;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   width: 100%;
-
-}
-
-nav ul li {
-   width: 100%;
-   text-align: center;
-
-}
-
-nav ul li a{
-   display: inline-block;
-   padding: 10px 0;
-   width: 100%;
-   text-decoration: none;
-   color: #f1f1f1;
-
-
-}
-
-/*
-Cabeçalho
-*/
 
 header {
-   background-image: url('../ImagensSite/Imagens/computer-1209641_1920.jpg');
-   background-size: cover;
-   background-position: center;
-   background-repeat: no-repeat;
-   color: #f1f1f1;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   text-align: center;
-   padding: 20px;
-   
-}
-header p {
-   margin-bottom: 2em ;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
 }
 
-/*
-Sobre
-*/
-
-#sobre {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   text-align: center;
-   padding: 0 20px 20px;
-   background-color: #8f2faf;
-   color: #f1f1f1;
+header .logo {
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
-#sobre p {
-   margin-bottom: 2.5em;
-   max-width: 1000px;
+header ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/*
-Serviços
-*/
-
-#servicos {
-   padding: 20px;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
+header ul li {
+    list-style: none;
+    margin-left: 20px;
 }
 
-#servicos div {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   text-align: center;
-   margin-top: 30px;
+header ul li a {
+    text-decoration: none;
+    padding: 6px 15px;
+    color: #fff;
+    border-radius: 20px;
 }
 
-#servicos img {
-   width: 10%;
-
+header ul li a:hover, header ul li a.active {
+    background: #fff;
+    color: #2b1055;
 }
 
-/*
-Portfólio
-*/
-
-#portfolio {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   padding-top: 20px;
-
+section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
-#portfolio h2 {
-   margin-top: 20px;
-
+section::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, #1c0522, transparent);
+    z-index: 1000;
 }
 
-#portfolio img {
-   width: 100%;
+section img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
 }
 
-
-/*
-Contato
-*/
-
-#contato {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   text-align: center;
-   padding: 20px;
+section img#moon {
+    mix-blend-mode: screen;
 }
 
-#contato img {
-   width: 10%;
-}
-
-/*
-Rodapé
-*/
-
-footer {
-   text-align: center;
-   padding: 10px;
-   background-color: #4d4d4d;
-   color: #f1f1f1;
-}
-
-/*
-media queries
-*/
-
-@media screen and (min-width: 768px) {
-   /*
-   navegação
-   */
-nav {   flex-direction: row;
-   justify-content: space-around;
-}
-
-nav ul {
-   flex-direction: row;
-   width: 70%;
-}
-
-/*
-cabeçalho
-*/
-
-header {
-   height: 600px;
-   height: 60vh;
-   justify-content: center;
+section img#mountains_front {
+    z-index: 10;
 
 }
 
-/*
-sobre
-*/
-
-#sobre {
-   height: 250px;
-   height: 30vh;
-   justify-content: center;
-   min-height: 250px;
+#text {
+    position: absolute;
+    right: -870px;
+    color: #fff;
+    white-space: nowrap;
+    font-size: 7.5vw;
+    z-index: 9;
 
 }
 
-/*
-servicos
-*/
-#servicos {
-   flex-direction: row;
-   flex-wrap: wrap;
-   align-items: flex-start;
-   max-width: 1000px;
-   margin: 0 auto;
+#btn {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 30px;
+    border-radius: 40px;
+    background: #fff;
+    color: #2b1055;
+    font-size: 1.5em;
+    z-index: 9;
+    transform: translateY(100px);
 }
 
-#servicos h2 {
-   text-align: center;
-   width: 100%;
+.sec {
+    position: relative;
+    padding: 100px;
+    background: #1c0522;
 }
 
-#servicos div {
-    flex-grow: 1;
-    flex-basis: 150px;
-    padding: 0 10px;
+.sec h2 {
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    color: #fff;
 }
 
-/*
-portfolio
-*/
-#portfolio {
-   flex-direction: row;
-   flex-wrap: wrap;
-}
-
-#portfolio h2 {
-   width: 100%;
-   text-align: center;
-}
-
-#portfolio img {
-   width: 33.333333333333%;
-
-}
-
-/*
-contato
-*/
-
-#contato {
-   flex-direction: row;
-   flex-wrap: nowrap;
-   justify-content: space-around;
-   max-width: 500px;
-   margin: 0 auto;
-   
-}
-#contato img {
-   width: 30%;
-}
-#contato h2
- {
-   flex-direction: row;
-   flex-wrap: nowrap;
-   justify-content: space-around;
-   max-width: 500px;
-   margin: 0 auto;
-}
-
-
-
+.sec p {
+    font-size: 1em;
+    color: #fff;
 
 }
