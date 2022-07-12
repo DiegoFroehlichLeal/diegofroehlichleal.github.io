@@ -1,5 +1,5 @@
 #**Practicing HTML**#
 
 
-*diegofrleal.github.io*
+*diegofroehlichleal.github.io*
 
