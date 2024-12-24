@@ -1,65 +1,50 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-
+    <script defer src="scripts/main.js"></script>
     <link rel="stylesheet" href="Styles/style.css">
+
 
     <title>Diego Froehlich Leal</title>
 
 </head>
+
 <body>
-<header>
-    <a href="#" class="logo">Podia ser <br>sua logo<br> aqui!</a>
-    <ul>
-        <li><a href="#" class="active">Home</a></li>
-        <li><a href="https://www.linkedin.com/in/diegofleal/" target="_blank">Sobre</a></li>
-        <li><a href="#">Contato</a></li>
-    </ul>
-</header>
-<section>
-    <img src="stars.png" id="stars" alt="Stars">
-    <img src="moon.png" id="moon" alt="Moon">
-    <img src="mountains_behind.png" id="mountains_behind" alt="Mountains Behind">
-    <h2 id="text">Diego Froehlich Leal</h2>
-    <a href="#sec" id="btn">Clique aqui!</a>
-    <img src="mountains_front.png" id="mountains_front" alt="Mountains Front">
-</section>
-<div class="sec" id="sec">
-    <h2>Oi! Me chamo Diego, tudo bom?</h2>
-    <p> <br>Este site mostra um pouquinho de Parallax, no css puro mesmo, aprendi um dia desses aí, achei divertido e resolvi
-        fazer igual, a proposito, Parallax é a diferença na posição de objetos vistos em diferentes faixas de visão,
-        medido pelo ângulo de inclinação entre as faixas. Com isso, objetos próximos têm uma maior Parallax que objetos
-        mais distantes, quando observado de posições diferentes. Dessa forma, podemos dizer que o Parallax é o que nos
-        dá a noção de profundidade em nosso campo de visão.
-        <br>O texto abaixo é só para aumentar o scroll da página mesmo =)
+    <header>
+        <a href="#" class="logo"><img src="resources/logoDFL.png" alt="Logo DFL"></a>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="https://www.linkedin.com/in/diegofleal/" target="_blank">Sobre</a></li>
+            <li><a href="#">Contato</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="resources/stars.png" id="stars" alt="Stars">
+        <img src="resources/moon.png" id="moon" alt="Moon">
+        <img src="resources/mountains_behind.png" id="mountains_behind" alt="Mountains Behind">
+        <!-- <h2 id="text">Diego Froehlich Leal</h2>
+        <a href="#sec" id="btn">Clique aqui!</a> -->
+        <img src="resources/mountains_front.png" id="mountains_front" alt="Mountains Front">
+    </section>
+    <div class="sec" id="sec">
+        <h2>Oi! Me chamo Diego, tudo bom?</h2>
+        <p> <br>Este site mostra um pouquinho de Parallax, no css puro mesmo, aprendi um dia desses aí, achei divertido
+            e resolvi
+            fazer igual, a proposito, Parallax é a diferença na posição de objetos vistos em diferentes faixas de visão,
+            medido pelo ângulo de inclinação entre as faixas. Com isso, objetos próximos têm uma maior Parallax que
+            objetos
+            mais distantes, quando observado de posições diferentes. Dessa forma, podemos dizer que o Parallax é o que
+            nos
+            dá a noção de profundidade em nosso campo de visão.
+            <br>O texto abaixo é só para aumentar o scroll da página mesmo =)
 
-    </p>
-</div>
-<script>
-    let stars = document.getElementById('stars')
-    let moon = document.getElementById('moon')
-    let mountains_behind = document.getElementById('mountains_behind')
-    let text = document.getElementById('text')
-    let btn = document.getElementById('btn')
-    let mountains_front = document.getElementById('mountains_front')
-    let header = document.querySelector('header');
-
-    window.addEventListener('scroll', function () {
-        let value = window.scrollY;
-        stars.style.left = value * 0.25 + 'px';
-        moon.style.top = value * 1.05 + 'px';
-        mountains_behind.style.top = value * 0.5 + 'px';
-        mountains_front.style.top = value * 0 + 'px';
-        text.style.marginRight = value * 4 + 'px';
-        text.style.marginTop = value * 1.5 + 'px';
-        btn.style.marginTop = value * 1.5 + 'px';
-        header.style.top = value * 0.5 + 'px';
-    })
-</script>
+        </p>
+    </div>
 </body>
 
 </html>
